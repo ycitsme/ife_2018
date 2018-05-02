@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>第一天</title>
+</head>
+<body>
+
+
+<h1>这是第一天的笔记</h1>
+<p>Html定义网页内容，CSS定义网页排版，Javascript定义网页行为</p>
+<button id="btn">打卡</buttion>
+<script>
+document.getElementById("btn").onclick = function () {
+  // 点按钮后弹出一个文字，你可以尝试改变文字内容
+var begin = new Date(2018,05,02);
+var today = new Date();
+
+  alert("加油，已经坚持了"+(today.getDate()-begin.getDate())+"，继续坚持");
+}
+</script>
+</body>
+</html>
