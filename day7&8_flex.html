@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tabbed info box</title>
+  <style>
+  /* General setup */
+  html {
+    font-family: sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+  }
+  /* info-box setup */
+  .info-box {
+    width: 100%;
+    margin: 0 auto;
+  }
+  /* styling info-box tabs */
+  .info-box ul {
+    padding-left: 0;
+    margin-top: 0;
+  }
+  .info-box li {
+    float: left;
+    list-style-type: none;
+    width: 20%;
+  }
+  .info-box li a {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    line-height: 3;
+    background-color: red;
+    color: black;
+    text-align: center;
+  }
+  .info-box li a:focus, .info-box li a:hover {
+    background-color: #a60000;
+    color: white;
+  }
+  .info-box li a.active {
+    background-color: #a60000;
+    color: white;
+  }
+  /* styling info-box panels */
+  .info-box .panels {
+    clear: both;
+    position: relative;
+  }
+  .info-box article {
+    background-color: #a60000;
+    color: white;
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    display: flex;
+  }
+  .info-box .active-panel {
+    visibility: visible;
+  }
+  
+  #box3tab1div1 {
+    flex:3;
+    border: 5px solid green;
+    margin:0;
+  }
+  #box3tab1div2 {
+    flex:7;
+    width: 70%;
+    border: 5px solid yellow;
+  }
+  #box3tab2div1{
+    width:200px;
+    border: 5px solid green;
+  }
+  #box3tab2div2{
+    flex:1;
+    border: 5px solid yellow;
+  }
+  #box3tab3div1{
+    flex: 1;
+    border: 5px solid green;
+  }
+  #box3tab3div2{
+    width:200px;
+    border: 5px solid yellow;
+  }
+  #box3tab4div1{
+    width: 150px;
+    border: 5px solid green;
+  }
+  #box3tab4div2{
+	flex: 1;
+    border: 5px solid yellow;
+  }
+  #box3tab4div3{
+    width: 150px;
+    border: 5px solid green;
+  }
+  #box3tab5div1{
+    display: inline-block;
+    font-size:12px;
+    width: 150px;
+    vertical-align: top;
+    border: 5px solid green;
+    margin:0;
+  }
+  #box3tab5div2{
+    width: 150px;
+    border: 5px solid yellow;
+  }
+  #box3tab5div3{
+    flex: 1;
+    border: 5px solid green;
+  }
+  
+  </style>
+</head>
+<body>
+<h1 style="text-align:center;">Flex</h1>
+<section class="info-box">
+  <ul>
+    <li><a href="#" class="active">Tab 1</a></li>
+    <li><a href="#">Tab 2</a></li>
+    <li><a href="#">Tab 3</a></li>
+    <li><a href="#">Tab 4</a></li>
+    <li><a href="#">Tab 5</a></li>
+
+  </ul>
+  <div class="panels">
+    <article class="active-panel">
+      <div id="box3tab1div1">The first tab</div>
+      <div id ="box3tab1div2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. Donec ultrices, urna maximus consequat aliquet, dui neque eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor urna. Nulla facilisi.</div>
+    </article>
+    <article>
+      <div id="box3tab2div1">The second tab</div>
+
+      <div id="box3tab2div2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. Donec ultrices, urna maximus consequat aliquet, dui neque eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor urna. Nulla facilisi.</div>
+    </article>
+    <article>
+      <div id="box3tab3div1">The third tab</div>
+
+      <div id ="box3tab3div2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. Donec ultrices, urna maximus consequat aliquet, dui neque eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor urna. Nulla facilisi.</div>
+    </article>
+    <article>
+      <div id="box3tab4div1">The forth tab</div>
+
+      <div id ="box3tab4div2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. </div>
+      <div id ="box3tab4div3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. Donec ultrices, urna maximus consequat aliquet, dui neque eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor urna. Nulla facilisi.</div>
+    </article>
+    <article>
+      <div id="box3tab5div1">The fifth tab</div>
+
+      <div id ="box3tab5div2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. </div>
+      <div id ="box3tab5div3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. Donec ultrices, urna maximus consequat aliquet, dui neque eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor urna. Nulla facilisi.</div>
+    </article>
+    
+  </div>
+</section>
+
+<script>
+var tabs = document.querySelectorAll('.info-box li a');
+var panels = document.querySelectorAll('.info-box article');
+for(i = 0; i < tabs.length; i++) {
+  var tab = tabs[i];
+  setTabHandler(tab, i);
+}
+function setTabHandler(tab, tabPos) {
+  tab.onclick = function() {
+    for(i = 0; i < tabs.length; i++) {
+      tabs[i].className = '';
+    }
+    tab.className = 'active';
+    for(i = 0; i < panels.length; i++) {
+      panels[i].className = '';
+    }
+    panels[tabPos].className = 'active-panel';
+  }
+}
+</script>
+
+</body>
+</html>
