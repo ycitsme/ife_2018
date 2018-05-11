@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>第七天到第八天，学习布局</title>
+<style>
+  * {
+    box-sizing:border-box;
+  }
+  header {
+    background: black;
+    color: white;
+  }
+  .head {
+    width: 960px;
+    margin: 0 auto;
+  }
+  .head:after {
+    content: "."; 
+    visibility: hidden; 
+    display: block; 
+    height: 0; 
+    clear: both;
+  }
+  header h1 {
+    float: left;
+  }
+  header ul {
+    float: right;
+  }
+  header li {
+    display: inline-block;
+  }
+  header li a {
+    text-decoration-line: underline;
+  }
+  .banner {
+    background: green;
+    position: relative;
+    height: 300px;
+  }
+  .banner ol {
+    display: inline;
+    position: absolute;
+    margin: 0;
+    padding-left: 0;
+    right: 10%;
+    bottom: 5%;
+  }
+  .banner li {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+    border: 2px solid black;
+    background: white;
+  }
+  .banner li.active  {
+    padding-top: 12px;
+  }
+  nav {
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    height: 100px;
+  }
+  .navigation {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .navigation div {
+    display: inline;
+    padding: 8px 25px;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 15px 15px 0 0;
+    background: grey;
+  }
+  .navigation div.active {
+    background: white;
+    border-bottom: 1px solid white;
+  }
+  main {
+    width: 960px;
+    margin: 0 auto;
+  }
+  .home section {
+    display: flex;
+    flex-wrap:wrap;
+  }
+  .home .row1 div {
+    text-align: center;
+    flex: 1 300px;
+    margin: 10px;
+    padding: 10px;
+    height: 200px;
+    border: 3px solid grey;
+  }
+  .home .row2 div {
+    text-align: center;
+    flex: 1 150px;
+    margin: 10px;
+    padding: 10px;
+    height:200px;
+    border: 3px solid grey;
+  }
+  .home .row3 div {
+    text-align: center;
+    flex: 1 300px;
+    margin: 10px;
+    padding: 10px;
+    height:200px;
+    border: 3px solid grey;
+  }
+  footer{
+    background: grey;
+    height: 100px;
+    text-align: center;
+    padding-top: 10px;
+  }
+  
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head">
+    <h1> Logo </h1>
+    <ul>
+      <li> <a>Github</a> </li>
+      <li> <a>Register</a> </li>
+      <li> <a>Login</a> </li>
+    </ul>
+  </div>
+</header>
+<div class="banner">
+  <ol>
+    <li> 1 </li>
+    <li class="active"> 2 </li>
+    <li> 3 </li>
+    <li> 4 </li>
+  <ol>
+  
+</div>
+<nav>
+  <div class="navigation">
+    <div class="active home"> HOME </div>
+    <div class="profile"> PROFILE </div>
+    <div class="about"> ABOUT </div>
+  </div>  
+</nav>
+<hr>
+<main>
+  <div class="home">
+    <section class="row1">
+      <div class="col1">This is Content 1</div>
+      <div class="col2">Maybe Content 2</div>
+      <div class="col3">Content 3</div>
+    </section>
+    <section class="row2">
+      <div class="col1">Content 4</div>
+      <div class="col2">Content 5</div>
+      <div class="col3">Content 6</div>
+      <div class="col3">Content 7</div>
+    </section>
+    <section class="row3">
+      <div class="col1">Content 8</div>
+      <div class="col2">Content 9</div>
+      <div class="col3">Content 10</div>
+    </section>
+  </div>
+  <div class="profile">
+  </div>
+  <div class="about">
+  </div>
+</main>
+<footer>&copy; 2018 ife.baidu.com</footer>
+
+</body>
+</html>
